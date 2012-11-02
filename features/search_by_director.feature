@@ -22,7 +22,7 @@ Scenario: add director to existing movie
 Scenario: find movie with same director
   Given I am on the details page for "Star Wars"
   When  I follow "Find Movies With Same Director"
-  Then  I should be on the Similar Movies page for "Star Wars"
+  Then  I should be on the home page
   And   I should see "THX-1138"
   But   I should not see "Blade Runner"
 
@@ -31,4 +31,4 @@ Scenario: can't find similar movies if we don't know director (sad path)
   Then  I should not see "Ridley Scott"
   When  I follow "Find Movies With Same Director"
   Then  I should be on the home page
-  And   I should see "'Alien' has no director info"
+  And   I should see "Selected movie has no director info"
