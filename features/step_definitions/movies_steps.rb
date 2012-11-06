@@ -19,3 +19,4 @@ Then /^(?:|I )should be on the home page/ do
     assert_equal movies_path, current_path
   end
 end
+

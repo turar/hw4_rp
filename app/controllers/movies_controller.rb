@@ -21,28 +21,34 @@ class MoviesController < ApplicationController
       @selected_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]
     end
     
-    @director = params[:director]
+    @similar_movie_id = params[:similar_movie]
 
     if params[:sort] != session[:sort]
       session[:sort] = sort
       flash.keep
-      redirect_to :sort => sort, :ratings => @selected_ratings, :director => @director and return
+      redirect_to :sort => sort, :ratings => @selected_ratings, :similar_movie => @similar_movie_id and return
     end
 
     if params[:ratings] != session[:ratings] and @selected_ratings != {}
       session[:sort] = sort
       session[:ratings] = @selected_ratings
       flash.keep
-      redirect_to :sort => sort, :ratings => @selected_ratings, :director => @director and return
+      redirect_to :sort => sort, :ratings => @selected_ratings, :similar_movie => @similar_movie_id and return
     end
 #@movies = Movie.find_all_by_rating(@selected_ratings.keys, ordering)
 
     @message = ''
-    if @director.blank?
-      @message = 'Selected movie has no director info'
+    if @similar_movie_id.blank?
       @movies = Movie.find(:all, :conditions => {:rating => @selected_ratings.keys}, :order => sort)
     else
-      @movies = Movie.find(:all, :conditions => {:rating => @selected_ratings.keys, :director => @director}, :order => sort)
+      similar_movie = Movie.find(@similar_movie_id)
+      director = similar_movie.director
+      if director != nil and not director.blank?
+        @movies = Movie.find(:all, :conditions => {:rating => @selected_ratings.keys, :director => director}, :order => sort)
+      else
+        @message = "'#{similar_movie.title}' has no director info"
+        @movies = Movie.find(:all, :conditions => {:id => @similar_movie_id} )
+      end
     end
   end
 
