@@ -20,3 +20,11 @@ Then /^(?:|I )should be on the home page/ do
   end
 end
 
+Then /I should be on the Similar Movies page for "(.*)"/ do |movie_name|
+  current_path = URI.parse(current_url).path
+    if current_path.respond_to? :should
+      current_path.should == movies_path
+    else
+      assert_equal movies_path, current_path
+  end
+end

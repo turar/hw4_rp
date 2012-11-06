@@ -2,4 +2,111 @@
 Cucumber Features: 
   :original_result: {}
 
-  :created_at: 2012-11-06 14:55:50.868451 -08:00
+  :created_at: 2012-11-06 15:31:50.963761 -08:00
+RSpec: 
+  :original_result: 
+    /home/ubuntu/Documents/hw4_rp/app/controllers/application_controller.rb: 
+    - 1
+    - 1
+    - 
+    /home/ubuntu/Documents/hw4_rp/app/helpers/application_helper.rb: 
+    - 1
+    - 
+    /home/ubuntu/Documents/hw4_rp/app/helpers/movies_helper.rb: 
+    - 1
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    /home/ubuntu/Documents/hw4_rp/app/controllers/movies_controller.rb: 
+    - 1
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+    - 
+    - 
+    - 1
+    - 1
+    - 1
+    - 1
+    - 
+    - 
+    - 1
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    /home/ubuntu/Documents/hw4_rp/app/models/movie.rb: 
+    - 1
+    - 1
+    - 0
+    - 
+    - 
+  :created_at: 2012-11-06 15:31:36.409886 -08:00
